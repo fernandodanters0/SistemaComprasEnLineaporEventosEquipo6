@@ -6,21 +6,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+// Spring JPA crea una tabla llamada order
 @Entity
 @Table(name = "orders")
 public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // Columna de la tabla (orders)
     private Long id;
-
     private String producto;
     private int cantidad;
     private String email;
 
-    public Order() {
-    }
-
+    // Inicializacion de la tbala al arrrancar la aplicacion 
     public Order(String producto, int cantidad, String email) {
         this.producto = producto;
         this.cantidad = cantidad;

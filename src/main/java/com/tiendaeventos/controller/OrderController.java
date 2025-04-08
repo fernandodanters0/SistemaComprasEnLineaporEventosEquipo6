@@ -9,6 +9,7 @@ import com.tiendaeventos.service.OrderService;
 
 @RestController
 @RequestMapping("/ordenes")
+// Expone un endpoint REST para crear una orden.
 public class OrderController {
     private final OrderService service;
 
@@ -16,6 +17,7 @@ public class OrderController {
         this.service = service;
     }
 
+    // Recibe una orden en formato JSON → la envía al servicio.
     @PostMapping
     public ResponseEntity<Order> crear(@RequestBody Order orden) {
         return new ResponseEntity<>(service.createOrder(orden), HttpStatus.CREATED);

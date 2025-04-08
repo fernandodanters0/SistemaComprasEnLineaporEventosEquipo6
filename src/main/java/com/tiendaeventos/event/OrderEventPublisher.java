@@ -6,11 +6,12 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 @Component
-public class OrderEventPublisher {
+public class OrderEventPublisher { // Publica el evento
 
     @Autowired
     private ApplicationEventPublisher publisher;
 
+    // Publica un evento personalizado (OrderCreatedEvent).
     public void publish(Order order) {
         publisher.publishEvent(new OrderCreatedEvent(this, order));
     }

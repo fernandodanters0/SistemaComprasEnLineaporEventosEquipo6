@@ -16,12 +16,8 @@ public class OrderService {
     private OrderEventPublisher publisher;
 
     public Order createOrder(Order order) {
-        // Guardamos la orden en la base de datos
-        Order saved = repo.save(order);
-
-        // Publicamos el evento
-        publisher.publish(saved);
-
+        Order saved = repo.save(order); // 1. Guarda la orden en la base, con el repo
+        publisher.publish(saved); // 2. Publica un evento (para que otros servicios reaccionen)
         return saved;
     }
 }
