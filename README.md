@@ -1,3 +1,5 @@
+📘 Descripción general del sistema
+
 El sistema presenta un prototipo de tienda en línea que se basa en una arquitectura orientada a eventos, donde la gestión de las órdenes de compra se realiza de manera independiente y eficiente.
 Está construido con Spring Boot, utilizando Java 17, Spring Events, Spring Data JPA y una base de datos en memoria H2.
 
