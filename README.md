@@ -15,3 +15,26 @@ Uno o varios manejadores de eventos reaccionan automáticamente ante este evento
 
 El sistema se organiza en módulos y paquetes para facilitar su mantenimiento, incluyendo entidades (Order, Producto, Usuario, MetodoPago), controladores (OrderController, UsuarioController),
 servicios, repositorios y listeners.
+
+
+Descripción del flujo de eventos
+
+Creación de la Orden
+  El cliente realiza una solicitud HTTP POST /ordenes, proporcionando los detalles del pedido: producto, cantidad, usuario y método de pago.
+
+Persistencia en la base de datos
+  El controlador invoca al servicio OrderService, que guarda la orden a través de OrderRepository (JPA). Esto genera una entrada en la base de datos H2.
+
+Publicación del evento
+  Justo después de almacenar la orden, OrderService utiliza OrderEventPublisher para generar un evento OrderCreatedEvent. Este evento incluye toda la información de la orden recién creada.
+
+Recepción por los listeners
+
+  El NotificationListener recibe el evento y simula el envío de un correo electrónico al cliente, mostrando un mensaje en la consola:
+    Enviando correo a: cliente@ejemplo.com
+
+  El InventoryListener también recibe el evento y simula una actualización del inventario del producto comprado:
+    Actualizando inventario del producto: Teclado
+
+Ejecución desacoplada
+  Ninguno de estos listeners está directamente vinculado al servicio de órdenes, lo que otorga al sistema flexibilidad, escalabilidad y facilidad de mantenimiento. Si se desea integrar un nuevo servicio (como facturación o envío),      basta con crear un nuevo listener.
