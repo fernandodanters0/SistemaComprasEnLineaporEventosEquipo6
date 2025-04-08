@@ -16,7 +16,8 @@ Uno o varios manejadores de eventos reaccionan automáticamente ante este evento
 El sistema se organiza en módulos y paquetes para facilitar su mantenimiento, incluyendo entidades (Order, Producto, Usuario, MetodoPago), controladores (OrderController, UsuarioController),
 servicios, repositorios y listeners.
 
-/****************************************************************************************************************************************************************/
+/*******************************************************************************************************************************************/
+
 Descripción del flujo de eventos
 
 Creación de la Orden
