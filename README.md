@@ -31,10 +31,21 @@ Identificar las notaciones necesarias para el Funcionamiento
 
 #### Qué parte programó:
 
+Programe las clases `OrderCreatedEvent` y `OrderEventPublisher`, la primera clase define un evento personalizado de Spring que permite indicar que una nueva orden fue creada, mientras que la segunda clase publica eventos personalizados de la clase `OrderCreatedEvent`, así los demás componentes reaccionan de forma automática y tener que acoplar de forma directa la lógica.
+
 #### Qué aprendió:
+
+- Cómo crear un evento personalizado extendiendo de `ApplicationEvent` y cómo publicar eventos usando `ApplicationEventPublisher`.
+- Asociar datos a un evento (orden) y el lanzar el evento después de su creación.
+- El uso de `@Component` para la gestión automatica de la clase por parte de Spring.
+
 
 #### Qué retos tuvo:
 
+- Entender por qué se necesita el parámetro source en constructor (tiene un uso interno en Spring).
+- Entender cómo funciona la inyección de dependencias con `@Autowired`
+- Saber cuándo y cómo lanzar un evento correctamente, sin romper la arquitectura del sistema.
+- Aprender a desacoplar la lógica para que otras partes del sistema reaccionen a eventos sin tener dependencias directas.
 
 ## Integrante C – Notificaciones
 - `NotificationListener`
