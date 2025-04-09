@@ -73,8 +73,3 @@ Programe las clases `OrderCreatedEvent` y `OrderEventPublisher`, la primera clas
 - Pruebas en Postman
 - Capturas de consola y navegador
 
-#### Qué parte programó:
-
-#### Qué aprendió:
-
-#### Qué retos tuvo:
