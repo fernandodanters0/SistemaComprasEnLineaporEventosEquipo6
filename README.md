@@ -52,10 +52,14 @@ Programe las clases `OrderCreatedEvent` y `OrderEventPublisher`, la primera clas
 - Muestra mensaje de notificación por consola
 
 #### Qué parte programó:
+Clase NotificationListener, clase que escucha eventos de órdenes creadas y ejecuta lógica de notificación para enviar un correo con la orden recibida.
 
-#### Qué aprendió:
-
-#### Qué retos tuvo:
+### Qué aprendió:
+* Entendí la manera en que un sistema con una arquitectura basada en eventos puede dar uso al manejo de eventos en forma independiente de otros microservicios.
+* Cómo un evento puede ser modificado sin comprometer el funcionamiento del sistema.
+* Aprendí a identificar el flujo que mantiene un sistema basado en eventos y la relación que mantienen sus clases.
+### Qué retos tuvo:
+En principio entender la manera en que opera el sistema en general, ya que si bien tenía la noción de como crear un listener para la notificación, fue necesario entender el flujo específico de este caso para poder relacionar el listener con la clase que lo desata.
 
 ## Integrante D – Inventario
 - `InventoryListener`
