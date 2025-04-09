@@ -19,7 +19,7 @@ Uno o varios manejadores de eventos reaccionan automáticamente ante este evento
 El sistema se organiza en módulos y paquetes para facilitar su mantenimiento, incluyendo entidades (Order, Producto, Usuario, MetodoPago), controladores (OrderController, UsuarioController), servicios, repositorios y listeners.
 
 
-# Funcionamiento del Sistema
+# Flujo de Eventos
 Creación de la Orden El cliente realiza una solicitud HTTP POST /ordenes, proporcionando los detalles del pedido: producto, cantidad, usuario y método de pago.
 
 Persistencia en la base de datos El controlador invoca al servicio OrderService, que guarda la orden a través de OrderRepository (JPA). Esto genera una entrada en la base de datos H2.
