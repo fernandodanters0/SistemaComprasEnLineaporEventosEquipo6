@@ -70,10 +70,3 @@ En principio entender la manera en que opera el sistema en general, ya que si bi
 #### Qué aprendió:
 
 #### Qué retos tuvo:
-
-
-## Todos – Pruebas e integración
-- `OrderService`
-- Pruebas en Postman
-- Capturas de consola y navegador
-
