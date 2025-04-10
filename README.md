@@ -66,7 +66,8 @@ En principio entender la manera en que opera el sistema en general, ya que si bi
 - Simula actualización de inventario
 
 #### Qué parte programó:
-
+la parte de la clase InventoryListener y lógica de inventario.
 #### Qué aprendió:
-
+Cómo funciona un listener de eventos en Spring Boot en la gestión de inventario. Que la lógica del inventario incluye busqueda del producto que se consulta en la base de datos por ID o nombre
 #### Qué retos tuvo:
+Que el codigo en mi computadora no me funcionaba tuve que hacerla en la de mi compañero, la simulación en mi caso me decia que funcionaba pero cuando buscaba en mi laptop me daba un error 404
